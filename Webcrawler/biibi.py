@@ -62,7 +62,6 @@ def bvid_info(data):
 def go_mv(bv_id):
     time.sleep(3)
     bv_id = bv_id
-    # index_url = f'https://www.bilibili.com/video/{index["bvid"]}'
     index_url = f'https://www.bilibili.com/video/{bv_id}'
     response = requests.get(url=index_url, headers=headers)
     # re.findall()查找

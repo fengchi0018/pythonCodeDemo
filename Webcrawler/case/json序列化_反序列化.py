@@ -1,5 +1,5 @@
 ''''
-@File  : test3.py
+@File  : json序列化_反序列化.py
 @Author: Feng
 @Date  : 2022/3/25
 @Desc  : 
@@ -12,14 +12,9 @@ url = "https://c0.3.cn/stock?skuId=12464037&cat=1713,3259,3333&venderId=10000779
 jQuery_id = url.split("=")[-1] + "("
 # jQuery6495921(
 print(jQuery_id)
+# response:jQuery6495921({}）
 # response.text.replace(jQuery_id, "")[:-1]
-
-
-# 切片
-s = 'ASTRING'
-# s[:-1]  # 'ASTRIN'
-# s[:len(s) - 1] # 'ASTRIN'
-# s[0:len(s) - 1]  # 'ASTRIN'
-print(s[:-2])
-print(s[:len(s) - 2])
-print(s[0:len(s) - 2])
+aa = "({aas})"
+a = "("
+str = aa.replace("(", "")[:-1]
+print(str)
