@@ -32,19 +32,14 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.82 Safari/537.36',
 }
 proxies = {
-    # "http": "http://10.10.1.10:3128",
+    "http": "http://10.10.1.10:3128",
     "https": "http://10.10.1.10:1080",
 }
-# proxies = {
-#     "http": "http://user:pass@10.10.1.10:3128/",
-# }
 target_url = "https://www.baidu.com"
-# 使用隧道域名发送请求
-print(proxies)
 try:
     response = requests.get(target_url, headers=headers, proxies=proxies)
     # 获取页面内容
     if response.status_code == 200:
-        print(response.text)  # 请勿使用keep-alive复用连接(会导致隧道不能切换IP)
+        print(response.text)
 except Exception as e:
     print(e)
