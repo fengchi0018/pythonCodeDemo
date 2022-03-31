@@ -43,32 +43,40 @@ for data in list_data:
     # 创建及编写表头文件
     file_title = data['name']
     with open(f'file/{file_title}.csv', mode='a', encoding='utf-8-sig', newline='') as f:
-        print("新建",file_title,"成功")
+        print("新建", file_title, "成功")
         csv_write = csv.writer(f)
         csv_write.writerow(['地区', '日期', '时刻', '坝前水位', '入库流量', '出库'])
     # 当前时间：
-    begin = datetime.date(2019, 1, 1)
-    end = datetime.date(2021, 12, 31)
+    begin = datetime.date(2019, 1, 3)
+    end = datetime.date(2019, 1, 1)
+    # end = datetime.date(2021, 12, 31)
     d = begin
     delta = datetime.timedelta(days=1)
     # 日期循环
-    while d <= end:
+    while d >= end:
         date_f = d.strftime("%Y-%m-%d")
         data_s = {'orgCode': data['code'], 'date': date_f, 'type': 1}
         time.sleep(1)
         response = requests.post(info_url, headers=headers2, data=data_s)
         json_data = json.loads(response.text)
-        datas = json_data['data']
-        # 当天时刻循环
-        try:
-            for li in datas:
-                RECORDQUARTER = li['RECORDQUARTER']
-                WLUPSTREAM = li['WLUPSTREAM']
-                WLDOWNSTREAM = li['WLDOWNSTREAM']
-                FLOWOUT = li['FLOWOUT']
-                with open(f'file/{file_title}.csv', mode='a', encoding='utf-8-sig', newline='') as f:
-                    csv_write = csv.writer(f)
-                    csv_write.writerow([file_title, date_f, RECORDQUARTER, WLUPSTREAM, WLDOWNSTREAM, FLOWOUT])
-        except Exception as e:
-            print(e)
-        d += delta
+        if 'data' in json_data:
+            datas = json_data['data']
+            # 当天时刻循环
+            try:
+                for li in datas:
+                    RECORDQUARTER = li['RECORDQUARTER']
+                    WLUPSTREAM = li['WLUPSTREAM']
+                    WLDOWNSTREAM = li['WLDOWNSTREAM']
+                    FLOWOUT = li['FLOWOUT']
+                    with open(f'file/{file_title}.csv', mode='a', encoding='utf-8-sig', newline='') as f:
+                        csv_write = csv.writer(f)
+                        csv_write.writerow([file_title, date_f, RECORDQUARTER, WLUPSTREAM, WLDOWNSTREAM, FLOWOUT])
+            except Exception as e:
+                print(e)
+            finally:
+                d -= delta
+                print("完成", file_title, "成功")
+        else:
+           d -= delta
+           print(file_title, "无数据")
+           continue
