@@ -11,7 +11,7 @@ import time
 
 from selenium.webdriver.common.by import By
 
-
+# 页面下滑
 def drop_down():
     for x in range(1, 8, 2):  # 1.3.5.7.9在不断下拉过程中，页面高度也会变
         time.sleep(1)
