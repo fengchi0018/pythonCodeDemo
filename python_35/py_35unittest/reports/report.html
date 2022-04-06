@@ -154,11 +154,11 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2022-03-24 17:02:50</span>
+                <span class="text-dark">2022-04-02 14:08:33</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.02 S</span>
+                <span class="text-dark">0.00 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
@@ -173,11 +173,11 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">7</span>
+                <span class="text-success">6</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
-                <span class="text-warning">0</span>
+                <span class="text-warning">1</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
@@ -223,13 +223,13 @@
                     <select id="testClass">
                         <option>所有</option>
                         
-                            <option>TestDemo</option>
-                        
                             <option>TestLogin</option>
+                        
+                            <option>TestLogin2</option>
                         
                             <option>EstRegin</option>
                         
-                            <option>TestLogin2</option>
+                            <option>TestDemo</option>
                         
                     </select>
 
@@ -287,7 +287,7 @@ test_01_001 (test_demo_ddt.TestDemo)执行——>【通过】
                     <td class="TestDemo">TestDemo</td>
                     <td>test_01_002</td>
                     <td>None</td>
-                    <td>0.0156s</td>
+                    <td>0.0s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -314,9 +314,9 @@ test_01_002 (test_demo_ddt.TestDemo)执行——>【通过】
                     <td class="TestLogin2">TestLogin2</td>
                     <td>test_login_001</td>
                     <td>密码错误</td>
-                    <td>0.0s</td>
+                    <td>0.00199s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -328,7 +328,61 @@ test_01_002 (test_demo_ddt.TestDemo)执行——>【通过】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_login_001 (test_demo_ddt_02.TestLogin2)执行——>【通过】
+                            <pre>test_login_001 (test_demo_ddt_02.TestLogin2)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
+    return func(self, params, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\python_35\py_35unittest\testcase\test_demo_ddt_02.py", line 35, in test_login
+    self.assertEqual(res, expected)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: {'code': 0, 'msg': '登录成功'} != {'code': 1, 'msg': '账号或密码不正确'}
+- {'code': 0, 'msg': '登录成功'}
+?          ^          ^^^^
+
++ {'code': 1, 'msg': '账号或密码不正确'}
+?          ^          ^^^^^^^^
+
 </pre>
                         
                         
@@ -568,8 +622,8 @@ test_01_002 (test_demo_ddt.TestDemo)执行——>【通过】
                     show: false
                 },
                 data: [
-                    {value: 7, name: '通过'},
-                    {value: 0, name: '失败'},
+                    {value: 6, name: '通过'},
+                    {value: 1, name: '失败'},
                     {value: 0, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
@@ -590,8 +644,8 @@ test_01_002 (test_demo_ddt.TestDemo)执行——>【通过】
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '100.00%'},
-                data: [{value: '100.00', name: '用例通过率'}],
+                detail: {formatter: '85.71%'},
+                data: [{value: '85.71', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [

@@ -22,6 +22,7 @@ def drop_down():
 
 driver = webdriver.Chrome()
 driver.get('https://www.douyin.com/user/MS4wLjABAAAAvWs-Ii-FyslBEFQ8t-2kDXtUGj7pRmUpclWbCXblZ8BLyXku-FTOMQtCe2QBJlGY')
+# 等待
 driver.implicitly_wait(10)
 drop_down()
 lis = driver.find_elements_by_css_selector('.ECMy_Zdt')
