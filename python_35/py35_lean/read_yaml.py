@@ -6,7 +6,7 @@
 '''
 
 import yaml
-f = open('test.yaml','r',encoding='utf-8')
+f = open('test.yaml', 'r', encoding='utf-8')
 data = f.read()
 f.close()
 all_data = yaml.load_all(data,Loader=yaml.FullLoader)

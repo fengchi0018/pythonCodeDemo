@@ -1,0 +1,21 @@
+#可安装yaml插件
+- 11
+- 22
+- 33
+- name: musen
+  age: 18
+  gender: 男
+- data: {'user':'ceshi','pwd':'1223'}
+  except: {"code":0,"msg":"通过"}
+  title: 登陆成功
+- data: {'user':'ceshi','pwd':'123'}
+  except: {"code":0,"msg":"通过"}
+  title: 登陆成功
+- data:
+    user: 123
+    pwd: 123
+  except:
+    code: 0
+    msg: 失败
+  title: 登陆成功
+  case_id: 1

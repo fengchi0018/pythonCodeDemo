@@ -1,0 +1,26 @@
+2022-04-07 17:28:54,906--test_case_ddt.py--INFO--42--用例--【登录成功】----执行成功
+2022-04-07 17:28:54,946--test_case_ddt.py--INFO--42--用例--【账号或密码不正确】----执行成功
+2022-04-07 17:28:54,986--test_case_ddt.py--INFO--42--用例--【账号或密码不能为空】----执行成功
+2022-04-07 17:28:55,072--test_case_ddt.py--ERROR--34--用例--【账号或密码不能为空】----执行失败
+2022-04-07 17:28:55,072--test_case_ddt.py--ERROR--37--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
+- {'code': 1, 'msg': '账号或密码不能为空'}
+?                           ^^^
+
++ {'code': 1, 'msg': '账号或密码不正确'}
+?                           ^^
+Traceback (most recent call last):
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 30, in test_login
+    self.assertEqual(expected, result)
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
+- {'code': 1, 'msg': '账号或密码不能为空'}
+?                           ^^^
+
++ {'code': 1, 'msg': '账号或密码不正确'}
+?                           ^^
+

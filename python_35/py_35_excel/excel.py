@@ -35,4 +35,4 @@ for item in res[1:]:
     dic = dict(zip(title, data))
     # 字典添加至列表中
     cases.append(dic)
-print("-----cases---:",cases)
+print("-----testcases---:",cases)
