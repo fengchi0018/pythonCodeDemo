@@ -3,6 +3,8 @@
 @Author  : feng
 """
 from configparser import ConfigParser
+from demo.common.handle_path import CONF_DIR
+import os
 
 
 class Config(ConfigParser):
@@ -10,7 +12,8 @@ class Config(ConfigParser):
         super().__init__()
         self.read(conf_file, encoding='utf-8')
 
-conf = Config(r"D:\PycharmProjects\Python_C\python_35\demo\conf\config.ini")
+
+conf = Config(os.path.join(CONF_DIR, "config.ini"))
 
 # if __name__ == '__main__':
 #     # conf = ConfigParser()

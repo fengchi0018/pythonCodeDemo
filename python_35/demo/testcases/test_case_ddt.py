@@ -4,15 +4,18 @@ Time:2022/3/16 11:07
 Author:feng
 ========================
 """
+import os
 import unittest
 from unittestreport import ddt, list_data
 from demo.common.handle_excel import HandExcel
 from demo.login_func import login_check
 from demo.common.handle_log import my_log
+from demo.common.handle_path import DATA_DIR
+
 
 @ddt
 class TestLogin(unittest.TestCase):
-    excel = HandExcel(r"D:\PycharmProjects\Python_C\python_35\demo\datas\测试用例.xlsx", "Sheet1")
+    excel = HandExcel(os.path.join(DATA_DIR,"测试用例.xlsx"), "Sheet1")
     cases = excel.read_data()
 
     @list_data(cases)

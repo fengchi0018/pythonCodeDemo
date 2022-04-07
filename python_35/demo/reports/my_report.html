@@ -154,11 +154,11 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2022-04-07 17:28:54</span>
+                <span class="text-dark">2022-04-07 17:57:55</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.21 S</span>
+                <span class="text-dark">0.22 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
@@ -173,11 +173,11 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">3</span>
+                <span class="text-success">2</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
-                <span class="text-warning">1</span>
+                <span class="text-warning">2</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
@@ -254,7 +254,7 @@
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_001</td>
                     <td>登录成功</td>
-                    <td>0.0399s</td>
+                    <td>0.0388s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -280,7 +280,7 @@
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_002</td>
                     <td>账号或密码不正确</td>
-                    <td>0.0388s</td>
+                    <td>0.0363s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -306,9 +306,9 @@
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_003</td>
                     <td>账号或密码不能为空</td>
-                    <td>0.0399s</td>
+                    <td>0.0747s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -320,7 +320,66 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_login_003 (test_case_ddt.TestLogin)执行——>【通过】
+                            <pre>test_login_003 (test_case_ddt.TestLogin)执行——>【失败】
+</pre>
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
+    return func(self, params, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 42, in test_login
+    raise e
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
+    self.assertEqual(expected, result)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
+- {'code': 1, 'msg': '账号或密码不能为空'}
+?                           ^^^
+
++ {'code': 1, 'msg': '账号或密码不正确'}
+?                           ^^
+
 </pre>
                         
                         
@@ -332,7 +391,7 @@
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_004</td>
                     <td>账号或密码不能为空</td>
-                    <td>0.0898s</td>
+                    <td>0.0728s</td>
                     
                         <td class="text-warning">失败</td>
                     
@@ -374,12 +433,12 @@
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 39, in test_login
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 42, in test_login
     raise e
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 30, in test_login
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
     self.assertEqual(expected, result)
 </pre>
                         
@@ -541,8 +600,8 @@
                     show: false
                 },
                 data: [
-                    {value: 3, name: '通过'},
-                    {value: 1, name: '失败'},
+                    {value: 2, name: '通过'},
+                    {value: 2, name: '失败'},
                     {value: 0, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
@@ -563,8 +622,8 @@
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '75.00%'},
-                data: [{value: '75.00', name: '用例通过率'}],
+                detail: {formatter: '50.00%'},
+                data: [{value: '50.00', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [

@@ -4,6 +4,8 @@
 """
 import logging
 from demo.common.handle_conf import conf
+from demo.common.handle_path import LOG_DIR
+import os
 
 
 def creat_log(name, leven, filname, sh_leven, fh_leven):
@@ -35,7 +37,7 @@ def creat_log(name, leven, filname, sh_leven, fh_leven):
 my_log = creat_log(
     name=conf.get("logging", "name"),
     leven=conf.get("logging", "leven"),
-    filname=conf.get("logging", "filname"),
+    filname=os.path.join(LOG_DIR, conf.get("logging", "filname")),
     sh_leven=conf.get("logging", "sh_leven"),
     fh_leven=conf.get("logging", "fh_leven"),
 )

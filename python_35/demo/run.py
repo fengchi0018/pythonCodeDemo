@@ -4,6 +4,8 @@
 """
 import unittest
 from unittestreport import TestRunner
-suit = unittest.defaultTestLoader.discover(r"D:\PycharmProjects\Python_C\python_35\demo\testcases")
-runner = TestRunner(suit, title="测试报告", filename=r"D:\PycharmProjects\Python_C\python_35\demo\reports\report", templates=1, tester="测测")
+from demo.common.handle_path import CASES_DIR,REPORT_DIR
+import os
+suit = unittest.defaultTestLoader.discover(CASES_DIR)
+runner = TestRunner(suit, title="测试报告", filename=os.path.join(REPORT_DIR,"my_report"), templates=1, tester="测测")
 runner.run()
