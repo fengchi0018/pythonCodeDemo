@@ -106,7 +106,7 @@ print(jsonpath(data,'$..createDate'))
 print(jsonpath(data,'$.data[1]'))
 print(jsonpath(data,'$.data[1].createDate'))
 # 筛选
-print(jsonpath(data,'$.data[?(@.userId==13)]'))
+print(jsonpath(data,'$.data[?(@.userId==12)]'))
 
 print(jsonpath(data,'$.data[?(@.opusId==1241)].nickname'))
 print(jsonpath(data,'$..[?(@.opusId==1241)].nickname'))
