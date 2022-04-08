@@ -3,7 +3,7 @@
 @Author  : feng
 """
 def login_check(username=None, password=None):
-    if username != None and password != None:
+    if username != '' and password != '':
         if username == "dudu" and password == "123":
             return {"code": 0, "msg": "登录成功"}
         else:
@@ -13,6 +13,7 @@ def login_check(username=None, password=None):
 
 
 if __name__ == "__main__":
-    res = login_check("dudu", "123")
+    res = login_check('', '')
     expected = {"code": 0, "msg": "登录成功"}
+    print(res)
     assert res == expected

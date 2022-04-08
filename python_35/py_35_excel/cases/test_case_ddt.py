@@ -23,6 +23,7 @@ class TestLogin(unittest.TestCase):
         # password = param["password"]
         # result = login_check(username, password)
         # 以上三行可用以下一行代替
+        print(param)
         result = login_check(**param)
         # 获取行号
         row = item["case_id"] + 1

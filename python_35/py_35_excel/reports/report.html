@@ -154,11 +154,11 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2022-03-16 17:14:50</span>
+                <span class="text-dark">2022-04-08 11:09:14</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">23.86 S</span>
+                <span class="text-dark">0.25 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
@@ -173,15 +173,15 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">0</span>
+                <span class="text-success">3</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
-                <span class="text-warning">0</span>
+                <span class="text-warning">2</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
-                <span class="text-danger">5</span>
+                <span class="text-danger">0</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-secondary">跳过用例</button>
@@ -254,9 +254,9 @@
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_001</td>
                     <td>登录成功</td>
-                    <td>3.7s</td>
+                    <td>0.0375s</td>
                     
-                        <td class="text-danger">错误</td>
+                        <td class="text-success">成功</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -268,56 +268,8 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>Traceback (most recent call last):
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 59, in testPartExecutor
-    yield
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 605, in run
-    testMethod()
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
-    return func(self, params, *args, **kwargs)
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 39, in test_login
-    self.book.write_data(row=row, column=8, value="通过")
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\excel_func.py", line 31, in write_data
-    workbook.save(self.filname)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\workbook\workbook.py", line 407, in save
-    save_workbook(self, filename)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
-    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\zipfile.py", line 1090, in __init__
-    self.fp = io.open(file, filemode)
-</pre>
-                        
-
-                            <pre>PermissionError: [Errno 13] Permission denied: 'D:\\PycharmProjects\\python_35\\py_35_excel\\测试用例.xlsx'
-</pre>
-                        
-
                             <pre>测试通过
-test_login_001 (test_case_ddt.TestLogin)执行——>【错误Error】
+test_login_001 (test_case_ddt.TestLogin)执行——>【通过】
 </pre>
                         
                         
@@ -329,9 +281,9 @@ test_login_001 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_002</td>
                     <td>账号或密码不正确</td>
-                    <td>1.6s</td>
+                    <td>0.0365s</td>
                     
-                        <td class="text-danger">错误</td>
+                        <td class="text-success">成功</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -343,56 +295,8 @@ test_login_001 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>Traceback (most recent call last):
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 59, in testPartExecutor
-    yield
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 605, in run
-    testMethod()
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
-    return func(self, params, *args, **kwargs)
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 39, in test_login
-    self.book.write_data(row=row, column=8, value="通过")
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\excel_func.py", line 31, in write_data
-    workbook.save(self.filname)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\workbook\workbook.py", line 407, in save
-    save_workbook(self, filename)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
-    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\zipfile.py", line 1090, in __init__
-    self.fp = io.open(file, filemode)
-</pre>
-                        
-
-                            <pre>PermissionError: [Errno 13] Permission denied: 'D:\\PycharmProjects\\python_35\\py_35_excel\\测试用例.xlsx'
-</pre>
-                        
-
                             <pre>测试通过
-test_login_002 (test_case_ddt.TestLogin)执行——>【错误Error】
+test_login_002 (test_case_ddt.TestLogin)执行——>【通过】
 </pre>
                         
                         
@@ -404,9 +308,9 @@ test_login_002 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_003</td>
                     <td>账号或密码不能为空</td>
-                    <td>13.5s</td>
+                    <td>0.0343s</td>
                     
-                        <td class="text-danger">错误</td>
+                        <td class="text-success">成功</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -418,56 +322,8 @@ test_login_002 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>Traceback (most recent call last):
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 59, in testPartExecutor
-    yield
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 605, in run
-    testMethod()
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
-    return func(self, params, *args, **kwargs)
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 39, in test_login
-    self.book.write_data(row=row, column=8, value="通过")
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\excel_func.py", line 31, in write_data
-    workbook.save(self.filname)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\workbook\workbook.py", line 407, in save
-    save_workbook(self, filename)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
-    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\zipfile.py", line 1090, in __init__
-    self.fp = io.open(file, filemode)
-</pre>
-                        
-
-                            <pre>PermissionError: [Errno 13] Permission denied: 'D:\\PycharmProjects\\python_35\\py_35_excel\\测试用例.xlsx'
-</pre>
-                        
-
                             <pre>测试通过
-test_login_003 (test_case_ddt.TestLogin)执行——>【错误Error】
+test_login_003 (test_case_ddt.TestLogin)执行——>【通过】
 </pre>
                         
                         
@@ -479,9 +335,9 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_004</td>
                     <td>账号或密码不能为空</td>
-                    <td>3.49s</td>
+                    <td>0.0698s</td>
                     
-                        <td class="text-danger">错误</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -493,7 +349,37 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
+                            <pre>测试未通过
+test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
+</pre>
+                        
+
                             <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
+    return func(self, params, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 36, in test_login
+    raise e
 </pre>
                         
 
@@ -502,17 +388,17 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【错误Error】
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 829, in assertEqual
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 1121, in assertDictEqual
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
     self.fail(self._formatMessage(msg, standardMsg))
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 670, in fail
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
     raise self.failureException(msg)
 </pre>
                         
@@ -526,65 +412,6 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【错误Error】
 
 </pre>
                         
-
-                            <pre>
-During handling of the above exception, another exception occurred:
-
-</pre>
-                        
-
-                            <pre>Traceback (most recent call last):
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 59, in testPartExecutor
-    yield
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 605, in run
-    testMethod()
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
-    return func(self, params, *args, **kwargs)
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 33, in test_login
-    self.book.write_data(row=row, column=8, value="未通过")
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\excel_func.py", line 31, in write_data
-    workbook.save(self.filname)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\workbook\workbook.py", line 407, in save
-    save_workbook(self, filename)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
-    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\zipfile.py", line 1090, in __init__
-    self.fp = io.open(file, filemode)
-</pre>
-                        
-
-                            <pre>PermissionError: [Errno 13] Permission denied: 'D:\\PycharmProjects\\python_35\\py_35_excel\\测试用例.xlsx'
-</pre>
-                        
-
-                            <pre>测试未通过
-test_login_004 (test_case_ddt.TestLogin)执行——>【错误Error】
-</pre>
-                        
                         
                     </td>
                 </tr>
@@ -594,9 +421,9 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_005</td>
                     <td>账号或密码不正确</td>
-                    <td>1.57s</td>
+                    <td>0.071s</td>
                     
-                        <td class="text-danger">错误</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -608,7 +435,37 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【错误Error】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
+                            <pre>测试未通过
+test_login_005 (test_case_ddt.TestLogin)执行——>【失败】
+</pre>
+                        
+
                             <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
+    return func(self, params, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 36, in test_login
+    raise e
 </pre>
                         
 
@@ -617,17 +474,17 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【错误Error】
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 829, in assertEqual
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 1121, in assertDictEqual
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
     self.fail(self._formatMessage(msg, standardMsg))
 </pre>
                         
 
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 670, in fail
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
     raise self.failureException(msg)
 </pre>
                         
@@ -635,65 +492,6 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【错误Error】
                             <pre>AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 0, 'msg': '登录成功'}
 - {'code': 1, 'msg': '账号或密码不能为空'}
 + {'code': 0, 'msg': '登录成功'}
-</pre>
-                        
-
-                            <pre>
-During handling of the above exception, another exception occurred:
-
-</pre>
-                        
-
-                            <pre>Traceback (most recent call last):
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 59, in testPartExecutor
-    yield
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\unittest\case.py", line 605, in run
-    testMethod()
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
-    return func(self, params, *args, **kwargs)
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\cases\test_case_ddt.py", line 33, in test_login
-    self.book.write_data(row=row, column=8, value="未通过")
-</pre>
-                        
-
-                            <pre>  File "D:\PycharmProjects\python_35\py_35_excel\excel_func.py", line 31, in write_data
-    workbook.save(self.filname)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\workbook\workbook.py", line 407, in save
-    save_workbook(self, filename)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\site-packages\openpyxl\writer\excel.py", line 291, in save_workbook
-    archive = ZipFile(filename, 'w', ZIP_DEFLATED, allowZip64=True)
-</pre>
-                        
-
-                            <pre>  File "D:\fc\Python36-32\lib\zipfile.py", line 1090, in __init__
-    self.fp = io.open(file, filemode)
-</pre>
-                        
-
-                            <pre>PermissionError: [Errno 13] Permission denied: 'D:\\PycharmProjects\\python_35\\py_35_excel\\测试用例.xlsx'
-</pre>
-                        
-
-                            <pre>测试未通过
-test_login_005 (test_case_ddt.TestLogin)执行——>【错误Error】
 </pre>
                         
                         
@@ -829,9 +627,9 @@ test_login_005 (test_case_ddt.TestLogin)执行——>【错误Error】
                     show: false
                 },
                 data: [
-                    {value: 0, name: '通过'},
-                    {value: 0, name: '失败'},
-                    {value: 5, name: '错误'},
+                    {value: 3, name: '通过'},
+                    {value: 2, name: '失败'},
+                    {value: 0, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
             }
@@ -851,8 +649,8 @@ test_login_005 (test_case_ddt.TestLogin)执行——>【错误Error】
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '0.00%'},
-                data: [{value: '0.00', name: '用例通过率'}],
+                detail: {formatter: '60.00%'},
+                data: [{value: '60.00', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [
