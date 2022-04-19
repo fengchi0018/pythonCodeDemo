@@ -1,174 +1,106 @@
-2022-04-07 17:57:55,515--test_case_ddt.py--INFO--45--用例--【登录成功】----执行成功
-2022-04-07 17:57:55,551--test_case_ddt.py--INFO--45--用例--【账号或密码不正确】----执行成功
-2022-04-07 17:57:55,624--test_case_ddt.py--ERROR--37--用例--【账号或密码不能为空】----执行失败
-2022-04-07 17:57:55,624--test_case_ddt.py--ERROR--40--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+2022-04-13 13:16:50,599--test_compoundRecommend.py--INFO--53-------用例查询1条通过
+2022-04-13 13:16:57,242--test_compoundRecommend.py--INFO--53-------用例查询10条通过
+2022-04-13 13:17:02,790--test_compoundRecommend.py--INFO--53-------用例查询20条通过
+2022-04-13 13:17:06,833--test_compoundRecommend.py--INFO--53-------用例查询指定类型通过
+2022-04-13 13:17:06,927--test_login.py--INFO--50-------成功
+2022-04-13 13:17:07,026--test_login.py--INFO--50-------成功
+2022-04-13 13:17:07,112--test_login.py--INFO--50-------成功
+2022-04-13 13:17:07,218--test_login.py--INFO--50-------成功
+2022-04-13 13:17:07,320--test_login.py--ERROR--47--0 != 2
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
+    self.assertEqual(jsonpath(res, '$.code')[0], expected['code'])
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-07 17:57:55,699--test_case_ddt.py--ERROR--37--用例--【账号或密码不能为空】----执行失败
-2022-04-07 17:57:55,699--test_case_ddt.py--ERROR--40--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+AssertionError: 0 != 2
+2022-04-13 13:17:07,326--test_login.py--ERROR--48-------失败
+2022-04-13 13:21:03,396--test_compoundRecommend.py--INFO--53-------用例查询1条通过
+2022-04-13 13:21:03,595--test_compoundRecommend.py--INFO--53-------用例查询10条通过
+2022-04-13 13:21:03,768--test_compoundRecommend.py--INFO--53-------用例查询20条通过
+2022-04-13 13:21:05,924--test_compoundRecommend.py--INFO--53-------用例查询指定类型通过
+2022-04-13 13:21:06,024--test_login.py--INFO--50-------用例登录成功成功
+2022-04-13 13:21:06,126--test_login.py--INFO--50-------用例账号不正确成功
+2022-04-13 13:21:06,236--test_login.py--INFO--50-------用例密码不正确成功
+2022-04-13 13:21:07,368--test_login.py--INFO--50-------用例账号不能为空成功
+2022-04-13 13:21:07,463--test_login.py--ERROR--47--0 != 2
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
+    self.assertEqual(jsonpath(res, '$.code')[0], expected['code'])
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-08 11:06:41,459--test_case_ddt.py--INFO--45--用例--【登录成功】----执行成功
-2022-04-08 11:06:41,504--test_case_ddt.py--INFO--45--用例--【账号或密码不正确】----执行成功
-2022-04-08 11:06:41,574--test_case_ddt.py--ERROR--37--用例--【账号或密码不能为空】----执行失败
-2022-04-08 11:06:41,575--test_case_ddt.py--ERROR--40--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+AssertionError: 0 != 2
+2022-04-13 13:21:07,464--test_login.py--ERROR--48-------用例密码不能为空失败
+2022-04-13 13:22:47,210--test_compoundRecommend.py--INFO--53-------用例查询1条通过
+2022-04-13 13:22:47,393--test_compoundRecommend.py--INFO--53-------用例查询10条通过
+2022-04-13 13:22:47,577--test_compoundRecommend.py--INFO--53-------用例查询20条通过
+2022-04-13 13:22:49,988--test_compoundRecommend.py--INFO--53-------用例查询指定类型通过
+2022-04-13 13:22:50,114--test_login.py--INFO--50-------用例登录成功成功
+2022-04-13 13:22:50,223--test_login.py--INFO--50-------用例账号不正确成功
+2022-04-13 13:22:50,314--test_login.py--INFO--50-------用例密码不正确成功
+2022-04-13 13:22:50,421--test_login.py--INFO--50-------用例账号不能为空成功
+2022-04-13 13:22:50,520--test_login.py--ERROR--47--0 != 2
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
+    self.assertEqual(jsonpath(res, '$.code')[0], expected['code'])
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-08 11:06:41,708--test_case_ddt.py--ERROR--37--用例--【账号或密码不能为空】----执行失败
-2022-04-08 11:06:41,708--test_case_ddt.py--ERROR--40--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+AssertionError: 0 != 2
+2022-04-13 13:22:50,524--test_login.py--ERROR--48-------用例密码不能为空失败
+2022-04-13 13:27:29,997--test_compoundRecommend.py--INFO--53-------用例查询1条通过
+2022-04-13 13:27:30,190--test_compoundRecommend.py--INFO--53-------用例查询10条通过
+2022-04-13 13:27:30,427--test_compoundRecommend.py--INFO--53-------用例查询20条通过
+2022-04-13 13:27:32,834--test_compoundRecommend.py--INFO--53-------用例查询指定类型通过
+2022-04-13 13:27:32,942--test_login.py--INFO--51-------用例登录成功成功
+2022-04-13 13:27:33,045--test_login.py--INFO--51-------用例账号不正确成功
+2022-04-13 13:27:33,141--test_login.py--INFO--51-------用例密码不正确成功
+2022-04-13 13:27:33,245--test_login.py--INFO--51-------用例账号不能为空成功
+2022-04-13 13:27:33,347--test_login.py--ERROR--47--2 != 0
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 33, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
+    self.assertEqual(expected['code'],jsonpath(res, '$.code')[0] )
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-08 11:16:15,847--test_case_ddt.py--INFO--46--用例--【登录成功】----执行成功
-2022-04-08 11:16:15,885--test_case_ddt.py--INFO--46--用例--【账号或密码不正确】----执行成功
-2022-04-08 11:16:15,960--test_case_ddt.py--ERROR--38--用例--【账号或密码不能为空】----执行失败
-2022-04-08 11:16:15,960--test_case_ddt.py--ERROR--41--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+AssertionError: 2 != 0
+2022-04-13 13:27:33,351--test_login.py--ERROR--48-------用例密码不能为空失败
+2022-04-13 13:36:50,804--test_login.py--INFO--59-------用例登录成功成功
+2022-04-13 13:36:51,115--test_login.py--INFO--59-------用例账号不正确成功
+2022-04-13 13:36:51,437--test_login.py--INFO--59-------用例密码不正确成功
+2022-04-13 13:36:51,798--test_login.py--INFO--59-------用例账号不能为空成功
+2022-04-13 13:36:52,140--test_login.py--ERROR--55--2 != 0
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 34, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 53, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
   File "C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
     old(self, first, second, msg)
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-08 11:16:16,036--test_case_ddt.py--ERROR--38--用例--【账号或密码不能为空】----执行失败
-2022-04-08 11:16:16,036--test_case_ddt.py--ERROR--41--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
+AssertionError: 2 != 0
+2022-04-13 13:36:52,145--test_login.py--ERROR--56-------用例密码不能为空失败
+2022-04-13 13:37:35,889--test_login.py--INFO--59-------用例账号不正确成功
+2022-04-13 13:38:36,536--test_login.py--INFO--60-------用例账号不正确成功
+2022-04-13 13:42:24,425--test_login.py--INFO--60-------用例登录成功成功
+2022-04-13 13:42:24,750--test_login.py--INFO--60-------用例账号不正确成功
+2022-04-13 13:42:24,843--test_login.py--INFO--60-------用例密码不正确成功
+2022-04-13 13:42:24,926--test_login.py--INFO--60-------用例账号不能为空成功
+2022-04-13 13:42:25,024--test_login.py--ERROR--56--2 != 0
 Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 34, in test_login
-    self.assertEqual(expected, result)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 54, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
   File "C:\Program Files\JetBrains\PyCharm Community Edition 2021.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
     old(self, first, second, msg)
   File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
     assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
-2022-04-08 11:24:16,494--test_case_ddt.py--INFO--46--用例--【登录成功】----执行成功
-2022-04-08 11:24:16,528--test_case_ddt.py--INFO--46--用例--【账号或密码不正确】----执行成功
-2022-04-08 11:24:16,563--test_case_ddt.py--INFO--46--用例--【账号或密码不能为空】----执行成功
-2022-04-08 11:24:16,632--test_case_ddt.py--ERROR--38--用例--【账号或密码不能为空】----执行失败
-2022-04-08 11:24:16,632--test_case_ddt.py--ERROR--41--{'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-Traceback (most recent call last):
-  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 34, in test_login
-    self.assertEqual(expected, result)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
-    assertion_func(first, second, msg=msg)
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
-    raise self.failureException(msg)
-AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
+AssertionError: 2 != 0
+2022-04-13 13:42:25,026--test_login.py--ERROR--57-------用例密码不能为空失败

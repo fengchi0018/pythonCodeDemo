@@ -154,15 +154,15 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2022-04-08 11:24:16</span>
+                <span class="text-dark">2022-04-13 13:27:29</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">0.18 S</span>
+                <span class="text-dark">3.69 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
-                <span class="text-dark">4</span>
+                <span class="text-dark">9</span>
             </li>
 
 
@@ -173,7 +173,7 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">3</span>
+                <span class="text-success">8</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
@@ -223,6 +223,8 @@
                     <select id="testClass">
                         <option>所有</option>
                         
+                            <option>TestCompoundRecommend</option>
+                        
                             <option>TestLogin</option>
                         
                     </select>
@@ -251,10 +253,10 @@
             
                 <tr>
                     <td>1</td>
-                    <td class="TestLogin">TestLogin</td>
-                    <td>test_login_001</td>
-                    <td>登录成功</td>
-                    <td>0.0362s</td>
+                    <td class="TestCompoundRecommend">TestCompoundRecommend</td>
+                    <td>test_compoundRecommend_001</td>
+                    <td>查询1条</td>
+                    <td>0.215s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -268,8 +270,7 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>{'username': 'dudu', 'password': '123'}
-test_login_001 (test_case_ddt.TestLogin)执行——>【通过】
+                            <pre>test_compoundRecommend_001 (test_compoundRecommend.TestCompoundRecommend)执行——>【通过】
 </pre>
                         
                         
@@ -278,10 +279,10 @@ test_login_001 (test_case_ddt.TestLogin)执行——>【通过】
             
                 <tr>
                     <td>2</td>
-                    <td class="TestLogin">TestLogin</td>
-                    <td>test_login_002</td>
-                    <td>账号或密码不正确</td>
-                    <td>0.0349s</td>
+                    <td class="TestCompoundRecommend">TestCompoundRecommend</td>
+                    <td>test_compoundRecommend_002</td>
+                    <td>查询10条</td>
+                    <td>0.194s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -295,8 +296,7 @@ test_login_001 (test_case_ddt.TestLogin)执行——>【通过】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>{'username': 'dudu', 'password': '1234'}
-test_login_002 (test_case_ddt.TestLogin)执行——>【通过】
+                            <pre>test_compoundRecommend_002 (test_compoundRecommend.TestCompoundRecommend)执行——>【通过】
 </pre>
                         
                         
@@ -305,10 +305,10 @@ test_login_002 (test_case_ddt.TestLogin)执行——>【通过】
             
                 <tr>
                     <td>3</td>
-                    <td class="TestLogin">TestLogin</td>
-                    <td>test_login_003</td>
-                    <td>账号或密码不能为空</td>
-                    <td>0.0349s</td>
+                    <td class="TestCompoundRecommend">TestCompoundRecommend</td>
+                    <td>test_compoundRecommend_003</td>
+                    <td>查询20条</td>
+                    <td>0.236s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -322,8 +322,7 @@ test_login_002 (test_case_ddt.TestLogin)执行——>【通过】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>{'username': '', 'password': ''}
-test_login_003 (test_case_ddt.TestLogin)执行——>【通过】
+                            <pre>test_compoundRecommend_003 (test_compoundRecommend.TestCompoundRecommend)执行——>【通过】
 </pre>
                         
                         
@@ -332,10 +331,140 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【通过】
             
                 <tr>
                     <td>4</td>
+                    <td class="TestCompoundRecommend">TestCompoundRecommend</td>
+                    <td>test_compoundRecommend_004</td>
+                    <td>查询指定类型</td>
+                    <td>2.41s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_compoundRecommend_004 (test_compoundRecommend.TestCompoundRecommend)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td class="TestLogin">TestLogin</td>
+                    <td>test_login_001</td>
+                    <td>登录成功</td>
+                    <td>0.107s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_login_001 (test_login.TestLogin)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td class="TestLogin">TestLogin</td>
+                    <td>test_login_002</td>
+                    <td>账号不正确</td>
+                    <td>0.103s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_login_002 (test_login.TestLogin)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td class="TestLogin">TestLogin</td>
+                    <td>test_login_003</td>
+                    <td>密码不正确</td>
+                    <td>0.0968s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_login_003 (test_login.TestLogin)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_004</td>
-                    <td>账号或密码不能为空</td>
-                    <td>0.0692s</td>
+                    <td>账号不能为空</td>
+                    <td>0.104s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>test_login_004 (test_login.TestLogin)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td class="TestLogin">TestLogin</td>
+                    <td>test_login_005</td>
+                    <td>密码不能为空</td>
+                    <td>0.123s</td>
                     
                         <td class="text-warning">失败</td>
                     
@@ -349,8 +478,7 @@ test_login_003 (test_case_ddt.TestLogin)执行——>【通过】
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>{'username': 'dudu', 'password': '12345'}
-test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
+                            <pre>test_login_005 (test_login.TestLogin)执行——>【失败】
 </pre>
                         
 
@@ -378,13 +506,13 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 43, in test_login
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 49, in test_login
     raise e
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_case_ddt.py", line 34, in test_login
-    self.assertEqual(expected, result)
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
+    self.assertEqual(expected['code'],jsonpath(res, '$.code')[0] )
 </pre>
                         
 
@@ -393,23 +521,12 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
 </pre>
                         
 
-                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 1211, in assertDictEqual
-    self.fail(self._formatMessage(msg, standardMsg))
-</pre>
-                        
-
-                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 753, in fail
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
     raise self.failureException(msg)
 </pre>
                         
 
-                            <pre>AssertionError: {'code': 1, 'msg': '账号或密码不能为空'} != {'code': 1, 'msg': '账号或密码不正确'}
-- {'code': 1, 'msg': '账号或密码不能为空'}
-?                           ^^^
-
-+ {'code': 1, 'msg': '账号或密码不正确'}
-?                           ^^
-
+                            <pre>AssertionError: 2 != 0
 </pre>
                         
                         
@@ -545,7 +662,7 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
                     show: false
                 },
                 data: [
-                    {value: 3, name: '通过'},
+                    {value: 8, name: '通过'},
                     {value: 1, name: '失败'},
                     {value: 0, name: '错误'},
                     {value: 0, name: '跳过'}
@@ -567,8 +684,8 @@ test_login_004 (test_case_ddt.TestLogin)执行——>【失败】
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '75.00%'},
-                data: [{value: '75.00', name: '用例通过率'}],
+                detail: {formatter: '88.89%'},
+                data: [{value: '88.89', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [
