@@ -154,15 +154,15 @@
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">开始时间</button>
-                <span class="text-dark">2022-04-13 13:27:29</span>
+                <span class="text-dark">2022-05-05 11:20:01</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">执行时间</button>
-                <span class="text-dark">3.69 S</span>
+                <span class="text-dark">2.73 S</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">用例总数</button>
-                <span class="text-dark">9</span>
+                <span class="text-dark">10</span>
             </li>
 
 
@@ -173,15 +173,15 @@
 
             <li class="list-group-item">
                 <button type="button" class="btn btn-success">成功用例</button>
-                <span class="text-success">8</span>
+                <span class="text-success">7</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-warning">失败用例</button>
-                <span class="text-warning">1</span>
+                <span class="text-warning">2</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-danger">错误用例</button>
-                <span class="text-danger">0</span>
+                <span class="text-danger">1</span>
             </li>
             <li class="list-group-item">
                 <button type="button" class="btn btn-secondary">跳过用例</button>
@@ -223,9 +223,11 @@
                     <select id="testClass">
                         <option>所有</option>
                         
+                            <option>TestLogin</option>
+                        
                             <option>TestCompoundRecommend</option>
                         
-                            <option>TestLogin</option>
+                            <option>_FailedTest</option>
                         
                     </select>
 
@@ -253,10 +255,83 @@
             
                 <tr>
                     <td>1</td>
+                    <td class="_FailedTest">_FailedTest</td>
+                    <td>test_audit</td>
+                    <td>None</td>
+                    <td>0.0141s</td>
+                    
+                        <td class="text-danger">错误</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>Traceback (most recent call last):
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\loader.py", line 34, in testFailure
+    raise self._exception
+</pre>
+                        
+
+                            <pre>ImportError: Failed to import test module: test_audit
+Traceback (most recent call last):
+  File "D:\fc\anaconda3\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "D:\fc\anaconda3\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_audit.py", line 16, in <module>
+    class TestAudit(unittest.TestCase):
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_audit.py", line 18, in TestAudit
+    cases = excel.read_data()
+  File "D:\PycharmProjects\Python_C\python_35\py_35_excel\excel_func.py", line 16, in read_data
+    workbook = openpyxl.load_workbook(self.filname)
+  File "D:\fc\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 315, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+  File "D:\fc\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 124, in __init__
+    self.archive = _validate_archive(fn)
+  File "D:\fc\anaconda3\lib\site-packages\openpyxl\reader\excel.py", line 94, in _validate_archive
+    raise InvalidFileException(msg)
+openpyxl.utils.exceptions.InvalidFileException: openpyxl does not support  file format, please check you can open it with Excel first. Supported formats are: .xlsx,.xlsm,.xltx,.xltm
+
+</pre>
+                        
+
+                            <pre>test_audit (unittest.loader._FailedTest)执行——>【错误Error】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
                     <td class="TestCompoundRecommend">TestCompoundRecommend</td>
                     <td>test_compoundRecommend_001</td>
                     <td>查询1条</td>
-                    <td>0.215s</td>
+                    <td>0.265s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -278,11 +353,11 @@
                 </tr>
             
                 <tr>
-                    <td>2</td>
+                    <td>3</td>
                     <td class="TestCompoundRecommend">TestCompoundRecommend</td>
                     <td>test_compoundRecommend_002</td>
                     <td>查询10条</td>
-                    <td>0.194s</td>
+                    <td>0.225s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -304,11 +379,11 @@
                 </tr>
             
                 <tr>
-                    <td>3</td>
+                    <td>4</td>
                     <td class="TestCompoundRecommend">TestCompoundRecommend</td>
                     <td>test_compoundRecommend_003</td>
                     <td>查询20条</td>
-                    <td>0.236s</td>
+                    <td>0.199s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -330,11 +405,11 @@
                 </tr>
             
                 <tr>
-                    <td>4</td>
+                    <td>5</td>
                     <td class="TestCompoundRecommend">TestCompoundRecommend</td>
                     <td>test_compoundRecommend_004</td>
                     <td>查询指定类型</td>
-                    <td>2.41s</td>
+                    <td>0.293s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -356,13 +431,13 @@
                 </tr>
             
                 <tr>
-                    <td>5</td>
+                    <td>6</td>
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_001</td>
                     <td>登录成功</td>
-                    <td>0.107s</td>
+                    <td>0.123s</td>
                     
-                        <td class="text-success">成功</td>
+                        <td class="text-warning">失败</td>
                     
                     <td>
                         <button type="button" class="btn btn-success btn_info">查看详情</button>
@@ -374,33 +449,55 @@
                     <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
                         
 
-                            <pre>test_login_001 (test_login.TestLogin)执行——>【通过】
+                            <pre>test_login_001 (test_login.TestLogin)执行——>【失败】
 </pre>
                         
-                        
-                    </td>
-                </tr>
-            
-                <tr>
-                    <td>6</td>
-                    <td class="TestLogin">TestLogin</td>
-                    <td>test_login_002</td>
-                    <td>账号不正确</td>
-                    <td>0.103s</td>
-                    
-                        <td class="text-success">成功</td>
-                    
-                    <td>
-                        <button type="button" class="btn btn-success btn_info">查看详情</button>
-                    </td>
-                </tr>
 
-                <tr class="test_log">
-
-                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                            <pre>Traceback (most recent call last):
+</pre>
                         
 
-                            <pre>test_login_002 (test_login.TestLogin)执行——>【通过】
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 676, in run
+    self._callTestMethod(testMethod)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 633, in _callTestMethod
+    method()
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\site-packages\unittestreport\core\dataDriver.py", line 18, in wrapper
+    return func(self, params, *args, **kwargs)
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 58, in test_login
+    raise e
+</pre>
+                        
+
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 54, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+</pre>
+                        
+
+                            <pre>  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+</pre>
+                        
+
+                            <pre>AssertionError: 1 != 0
 </pre>
                         
                         
@@ -410,9 +507,37 @@
                 <tr>
                     <td>7</td>
                     <td class="TestLogin">TestLogin</td>
+                    <td>test_login_002</td>
+                    <td>账号不正确</td>
+                    <td>0.816s</td>
+                    
+                        <td class="text-success">成功</td>
+                    
+                    <td>
+                        <button type="button" class="btn btn-success btn_info">查看详情</button>
+                    </td>
+                </tr>
+
+                <tr class="test_log">
+
+                    <td colspan="7" class="small text-muted" style=" word-wrap:break-word; word-break:break-all">
+                        
+
+                            <pre>13339814059
+该号码未注册
+test_login_002 (test_login.TestLogin)执行——>【通过】
+</pre>
+                        
+                        
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td class="TestLogin">TestLogin</td>
                     <td>test_login_003</td>
                     <td>密码不正确</td>
-                    <td>0.0968s</td>
+                    <td>0.15s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -434,11 +559,11 @@
                 </tr>
             
                 <tr>
-                    <td>8</td>
+                    <td>9</td>
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_004</td>
                     <td>账号不能为空</td>
-                    <td>0.104s</td>
+                    <td>0.116s</td>
                     
                         <td class="text-success">成功</td>
                     
@@ -460,11 +585,11 @@
                 </tr>
             
                 <tr>
-                    <td>9</td>
+                    <td>10</td>
                     <td class="TestLogin">TestLogin</td>
                     <td>test_login_005</td>
                     <td>密码不能为空</td>
-                    <td>0.123s</td>
+                    <td>0.0959s</td>
                     
                         <td class="text-warning">失败</td>
                     
@@ -506,13 +631,13 @@
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 49, in test_login
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 58, in test_login
     raise e
 </pre>
                         
 
-                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 45, in test_login
-    self.assertEqual(expected['code'],jsonpath(res, '$.code')[0] )
+                            <pre>  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 54, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
 </pre>
                         
 
@@ -662,9 +787,9 @@
                     show: false
                 },
                 data: [
-                    {value: 8, name: '通过'},
-                    {value: 1, name: '失败'},
-                    {value: 0, name: '错误'},
+                    {value: 7, name: '通过'},
+                    {value: 2, name: '失败'},
+                    {value: 1, name: '错误'},
                     {value: 0, name: '跳过'}
                 ]
             }
@@ -684,8 +809,8 @@
             {
                 name: '测试结果',
                 type: 'gauge',
-                detail: {formatter: '88.89%'},
-                data: [{value: '88.89', name: '用例通过率'}],
+                detail: {formatter: '70.00%'},
+                data: [{value: '70.00', name: '用例通过率'}],
                 axisLine: {
                     lineStyle: {
                         color: [

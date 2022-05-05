@@ -2,7 +2,7 @@
 @File  : test_compoundRecommend.py
 @Author: Feng
 @Date  : 2022/4/13
-@Desc  : 
+@Desc  : 推荐作品查询接口
 '''
 import unittest
 import os

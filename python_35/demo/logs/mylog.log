@@ -104,3 +104,30 @@ Traceback (most recent call last):
     raise self.failureException(msg)
 AssertionError: 2 != 0
 2022-04-13 13:42:25,026--test_login.py--ERROR--57-------用例密码不能为空失败
+2022-05-05 11:20:01,925--test_compoundRecommend.py--INFO--53-------用例查询1条通过
+2022-05-05 11:20:02,158--test_compoundRecommend.py--INFO--53-------用例查询10条通过
+2022-05-05 11:20:02,357--test_compoundRecommend.py--INFO--53-------用例查询20条通过
+2022-05-05 11:20:02,650--test_compoundRecommend.py--INFO--53-------用例查询指定类型通过
+2022-05-05 11:20:02,756--test_login.py--ERROR--56--1 != 0
+Traceback (most recent call last):
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 54, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 1 != 0
+2022-05-05 11:20:02,768--test_login.py--ERROR--57-------用例登录成功失败
+2022-05-05 11:20:03,589--test_login.py--INFO--60-------用例账号不正确成功
+2022-05-05 11:20:03,740--test_login.py--INFO--60-------用例密码不正确成功
+2022-05-05 11:20:03,856--test_login.py--INFO--60-------用例账号不能为空成功
+2022-05-05 11:20:03,951--test_login.py--ERROR--56--2 != 0
+Traceback (most recent call last):
+  File "D:\PycharmProjects\Python_C\python_35\demo\testcases\test_login.py", line 54, in test_login
+    self.assertEqual(expected['code'], jsonpath(res, '$.code')[0])
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 912, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\fc\anaconda3\lib\unittest\case.py", line 905, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 2 != 0
+2022-05-05 11:20:03,952--test_login.py--ERROR--57-------用例密码不能为空失败
