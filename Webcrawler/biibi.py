@@ -65,28 +65,39 @@ def go_mv(bv_id):
     index_url = f'https://www.bilibili.com/video/{bv_id}'
     response = requests.get(url=index_url, headers=headers)
     # re.findall()查找
-    title = re.findall('<h1 title="(.*?)" class="video-title">', response.text)[0].replace(' ', '')
-    print('------------' + title + '--------------')
-    html_data = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
-    json_data = json.loads(html_data)
-    # 获取视频音频地址
-    audio_url = json_data['data']['dash']['audio'][0]['backupUrl'][0]
-    video_url = json_data['data']['dash']['video'][0]['backupUrl'][0]
-    # 保存数据
-    audio_content = requests.get(url=audio_url, headers=headers).content
-    video_content = requests.get(url=video_url, headers=headers).content
-    file_path = r"D:/PycharmProjects/Webcrawler/bibi_mv/{}".format(title)
-    with open(file_path + '.mp3', mode='wb') as f:
-        f.write(audio_content)
-    with open(file_path + '.mp4', mode='wb') as f:
-        f.write(video_content)
-    # 视频音频合成
-    cmd = f"ffmpeg -i D:/PycharmProjects/Webcrawler/bibi_mv/{title}.mp4 -i D:/PycharmProjects/Webcrawler/bibi_mv/{title}.mp3 -c:v copy -c:a aac -strict experimental D:/PycharmProjects/Webcrawler/bibi_mv/{title}output.mp4"
-    subprocess.run(cmd, shell=True)
-    print('----------' + f'{title}已下载’+‘------------')
-    # 移除原视频音频
-    os.remove(f'{file_path}.mp3')
-    os.remove(f'{file_path}.mp4')
+    # print(response.text)
+    try:
+        title_li = re.findall('<h1 id="video-title" title="(.*)" class ="video-title" >', response.text)
+        if len(title_li) > 0:
+            title = title_li[0].replace(' ', '')
+            print('------------' + title + '--------------')
+            html_data = re.findall('<script>window.__playinfo__=(.*?)</script>', response.text)[0]
+            json_data = json.loads(html_data)
+            # 获取视频音频地址
+            audio_url = json_data['data']['dash']['audio'][0]['backupUrl'][0]
+            video_url = json_data['data']['dash']['video'][0]['backupUrl'][0]
+            # 保存数据
+            audio_content = requests.get(url=audio_url, headers=headers).content
+            video_content = requests.get(url=video_url, headers=headers).content
+            file_path = r"D:/PycharmProjects/Webcrawler/bibi_mv/{}".format(title)
+            with open(file_path + '.mp3', mode='wb') as f:
+                f.write(audio_content)
+            with open(file_path + '.mp4', mode='wb') as f:
+                f.write(video_content)
+            # 视频音频合成
+            cmd = f"ffmpeg -i D:/desk/bibi_mv/{title}.mp4 -i D:/desk/bibi_mv{title}.mp3 -c:v copy -c:a aac -strict experimental D:/desk/bibi_mv/{title}output.mp4"
+            subprocess.run(cmd, shell=True)
+            print('----------' + f'{title}已下载’+‘------------')
+            # 移除原视频音频
+            os.remove(f'{file_path}.mp3')
+            os.remove(f'{file_path}.mp4')
+        else:
+            print("未获取到标题")
+    except Exception as e:
+        print("标题获取错误：",e)
+        # title = re.findall('<h1 id="video-title" title="(.*)" class ="video-title" >', response.text)[0].replace(' ', '')
+
+
 
 
 """
