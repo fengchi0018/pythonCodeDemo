@@ -2,7 +2,7 @@
 @File  : getPro.py
 @Author: Feng
 @Date  : 2022/3/28
-@Desc  : 
+@Desc  : 快代理
 '''
 import requests
 import re
